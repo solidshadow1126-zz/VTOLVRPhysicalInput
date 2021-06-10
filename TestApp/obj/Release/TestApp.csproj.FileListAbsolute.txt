@@ -1,0 +1,2 @@
+D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Release\TestApp.csprojAssemblyReference.cache
+D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Release\TestApp.csproj.CoreCompileInputs.cache
