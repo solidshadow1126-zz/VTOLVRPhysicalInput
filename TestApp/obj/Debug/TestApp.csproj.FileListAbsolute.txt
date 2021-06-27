@@ -86,3 +86,5 @@ D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Debug\TestApp.cs
 D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
 D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Debug\TestApp.exe
 D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput-master\TestApp\obj\Debug\TestApp.pdb
+D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput\TestApp\obj\Debug\TestApp.csprojAssemblyReference.cache
+D:\Flight Stuff\VTOL Mod\VTOLVRPhysicalInput\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
