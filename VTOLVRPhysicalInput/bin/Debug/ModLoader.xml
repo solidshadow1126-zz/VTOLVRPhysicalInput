@@ -74,6 +74,11 @@
             The F-45A
             </summary>
         </member>
+        <member name="F:VTOLVehicles.AH94">
+            <summary>
+            The AH-94
+            </summary>
+        </member>
         <member name="M:ModLoader.ModLoader.FindModIndex(System.String)">
             <summary>
             Finds the index of the current mod by its name.
@@ -220,6 +225,12 @@
         <member name="M:VTOLAPI.GetUsersMods">
             <summary>
             Returns a list of mods which are currently loaded
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTOLAPI.GetUsersOrderedMods">
+            <summary>
+            Returns an ordered string of mods which are currently loaded
             </summary>
             <returns></returns>
         </member>

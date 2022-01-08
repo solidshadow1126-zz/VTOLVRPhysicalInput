@@ -74,6 +74,11 @@
             The F-45A
             </summary>
         </member>
+        <member name="F:VTOLVehicles.AH94">
+            <summary>
+            The AH-94
+            </summary>
+        </member>
         <member name="M:ModLoader.ModLoader.FindModIndex(System.String)">
             <summary>
             Finds the index of the current mod by its name.
@@ -96,20 +101,12 @@
             The default textures so we can revert back
             </summary>
         </member>
-        <member name="M:ModLoader.ModReader.GetMods(System.String,System.Boolean)">
+        <member name="M:ModLoader.ModReader.GetMods">
             <summary>
             Gets all of the mods info located in the path into memory
             </summary>
             <param name="path">The folder to check for mods</param>
             <param name="isDevFolder">If we are checking through the users My Projects Folder</param>
-        </member>
-        <member name="M:ModLoader.ModReader.GetNewMods(System.String,System.Collections.Generic.List{Mod}@)">
-            <summary>
-            Add the mods to the list without effecting the current mods
-            </summary>
-            <param name="path">Folder where the mods are located</param>
-            <param name="currentMods">The current list of mods</param>
-            <returns>True if there where new mods</returns>
         </member>
         <member name="M:DiscordRpc.RichPresence.GetStruct">
             <summary>
@@ -134,6 +131,37 @@
         <member name="M:DiscordRpc.RichPresence.FreeMem">
             <summary>
             Free the allocated memory for conversion to <see cref="T:DiscordRpc.RichPresenceStruct"/>
+            </summary>
+        </member>
+        <member name="T:Mod">
+            <summary>
+            The information stored about a mod which is used by the mod loader
+            and can be used by mods with the API command GetUsersMods
+            </summary>
+        </member>
+        <member name="F:Mod.name">
+            <summary>
+            The name of the mod which displays on the mods page.
+            </summary>
+        </member>
+        <member name="F:Mod.description">
+            <summary>
+            The description of the mod which displays when the mod is selected. 
+            </summary>
+        </member>
+        <member name="F:Mod.dllPath">
+            <summary>
+            The location of the .dll file of this mod.
+            </summary>
+        </member>
+        <member name="F:Mod.isLoaded">
+            <summary>
+            If the mod is currently loaded.
+            </summary>
+        </member>
+        <member name="F:Mod.ModFolder">
+            <summary>
+            The folder which the mods dll and other files are stored.
             </summary>
         </member>
         <member name="T:VTOLAPI">
@@ -200,10 +228,41 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:VTOLAPI.GetUsersOrderedMods">
+            <summary>
+            Returns an ordered string of mods which are currently loaded
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:VTOLAPI.WaitForScenarioReload">
             <summary>
             Please don't use this, this is for the mod loader only.
             </summary>
+        </member>
+        <member name="M:VTOLAPI.RegisterMod(VTOLMOD)">
+            <summary>
+            You need to Register your mod before you start setting values inside your Shared Data
+            </summary>
+            <param name="mod">Your mod's class (use "this")</param>
+        </member>
+        <member name="M:VTOLAPI.SetValue(VTOLMOD,System.String,System.Object,System.Boolean@)">
+            <summary>
+            Sets a value for your mods shared data.
+            </summary>
+            <param name="mod">Your mod (use "this")</param>
+            <param name="key">The key you want to use. if it's already existing, it will be overridden</param>
+            <param name="value">the value you want to set it to</param>
+            <param name="isSuccessful">if it was successful in setting it</param>
+        </member>
+        <member name="M:VTOLAPI.GetValue(System.String,System.String,System.Boolean@,System.Object@,VTOLAPI.ErrorResult@)">
+            <summary>
+            Gets a value stored in the Mod Shared Data inside the API
+            </summary>
+            <param name="modName">The name of the mod. CASE SENSITIVE</param>
+            <param name="key">The key in the dictionary</param>
+            <param name="isSuccessful">If the value was found</param>
+            <param name="value">The stored value inside the dictionary if it was there. This will be null if it wasn't found</param>
+            <param name="error">Reason why it couldn't find the key, this will be None if it was found</param>
         </member>
         <member name="T:VTOLMOD">
             <summary>
@@ -249,57 +308,6 @@
             Used by the mod loader to set ThisMod variable.
             </summary>
             <param name="thisMod"></param>
-        </member>
-        <member name="T:Mod">
-            <summary>
-            The information stored about a mod which is used by the mod loader
-            and can be used by mods with the API command GetUsersMods
-            </summary>
-        </member>
-        <member name="F:Mod.name">
-            <summary>
-            The name of the mod which displays on the mods page.
-            </summary>
-        </member>
-        <member name="F:Mod.description">
-            <summary>
-            The description of the mod which displays when the mod is selected. 
-            </summary>
-        </member>
-        <member name="F:Mod.dllPath">
-            <summary>
-            The location of the .dll file of this mod.
-            </summary>
-        </member>
-        <member name="F:Mod.listGO">
-            <summary>
-            GameObjects used by the mod loader.
-            </summary>
-        </member>
-        <member name="F:Mod.settingsGO">
-            <summary>
-            GameObjects used by the mod loader.
-            </summary>
-        </member>
-        <member name="F:Mod.settingsHolerGO">
-            <summary>
-            GameObjects used by the mod loader.
-            </summary>
-        </member>
-        <member name="F:Mod.isLoaded">
-            <summary>
-            If the mod is currently loaded.
-            </summary>
-        </member>
-        <member name="F:Mod.imagePath">
-            <summary>
-            The path to the preview image if one exists.
-            </summary>
-        </member>
-        <member name="F:Mod.ModFolder">
-            <summary>
-            The folder which the mods dll and other files are stored.
-            </summary>
         </member>
     </members>
 </doc>

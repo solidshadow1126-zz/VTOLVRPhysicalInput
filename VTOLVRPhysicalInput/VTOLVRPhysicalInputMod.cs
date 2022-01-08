@@ -96,7 +96,7 @@ namespace VTOLVRPhysicalInput
             _outputStick
                 .AddAxisSet("StickXyz", new List<string> { "Roll", "Pitch", "Yaw" })
                 .AddAxisSet("Touchpad", new List<string> { "X", "Y", "Z" })
-                //.AddAxisSet("ThrottleTouchpad", new List<string> { "X", "Y", "Z" }) // comment out for throttle touchpad instead of stick
+                .AddAxisSet("ThrottleTouchpad", new List<string> { "X", "Y", "Z" }) // comment out for throttle touchpad instead of stick
                 .AddAxisSet("TriggerAxis", new List<string> { "TriggerAxis" })
                 .AddButton("Menu")
                 .AddButton("Trigger")
@@ -110,7 +110,7 @@ namespace VTOLVRPhysicalInput
                     .AddButtonDelegate("Menu", TestingUpdateStickMenuButton)
                     .AddButtonDelegate("Trigger", TestingUpdateStickTriggerButton)
                     .AddButtonDelegate("Thumbstick", TestUpdatestickTouchpadPressButton)
-                    //.AddAxisSetDelegate("ThrottleTouchpad", TestingUpdateThrottleTouchpad) // comment out for throttle touchpad instead of stick
+                    .AddAxisSetDelegate("ThrottleTouchpad", TestingUpdateThrottleTouchpad) // comment out for throttle touchpad instead of stick
                     .AddAxisSetDelegate("TriggerAxis", TestingUpdateStickTriggerAxis);
 
             }
@@ -122,7 +122,7 @@ namespace VTOLVRPhysicalInput
                     .AddButtonDelegate("Menu", UpdateStickMenuButton)
                     .AddButtonDelegate("Trigger", UpdateStickTriggerButton)
                     .AddButtonDelegate("Thumbstick", UpdateStickTouchpadPressButton)
-                    //.AddAxisSetDelegate("ThrottleTouchpad", UpdateThrottleTouchpad) // comment out for throttle touchpad instead of stick
+                    .AddAxisSetDelegate("ThrottleTouchpad", UpdateThrottleTouchpad) // comment out for throttle touchpad instead of stick
                     .AddAxisSetDelegate("TriggerAxis", UpdateStickTriggerAxis);
             }
 

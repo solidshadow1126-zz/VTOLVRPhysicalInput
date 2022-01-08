@@ -22,10 +22,17 @@
     </AxisToVectorComponent>
 	<!--Trigger-->
 	<ButtonToButton>
-      <InputButton>1</InputButton>
+      <InputButton>6</InputButton>
+      <OutputDevice>Stick</OutputDevice>
+      <OutputButton>Trigger</OutputButton>
+	</ButtonToButton>
+	<!--Pickle Button for bombs-->
+	<ButtonToButton>
+      <InputButton>2</InputButton>
       <OutputDevice>Stick</OutputDevice>
       <OutputButton>Trigger</OutputButton>
     </ButtonToButton>
+	
 	<!--TriggerAxis for F45 Canon-->
 	<ButtonToVectorComponent>
       <InputButton>1</InputButton>
@@ -37,16 +44,18 @@
 	</ButtonToVectorComponent>
 	<!--Weapon selector switch/Menu button-->
     <ButtonToButton>
-      <InputButton>5</InputButton>
+      <InputButton>15</InputButton>
       <OutputDevice>Stick</OutputDevice>
       <OutputButton>Menu</OutputButton>
     </ButtonToButton>
 	<!-- Sensor slew depress (for selecting targets on radar) -->
 	<ButtonToButton>
-      <InputButton>4</InputButton>
+      <InputButton>14</InputButton>
       <OutputDevice>Stick</OutputDevice>
       <OutputButton>Thumbstick</OutputButton>
     </ButtonToButton>
+	
+	
 	<!-- Sensor slew axis (for moving icon on radar/TGP etc) -->
     <PovToTouchpad>
       <InputPov>1</InputPov>
@@ -56,7 +65,7 @@
   </StickMappings>
 
   <StickMappings>
-    <StickName>Joystick - HOTAS Warthog</StickName>
+    <StickName>TWCS Throttle</StickName>
     <!--Yaw-->
     <!--<AxisToVectorComponent>
       <InputAxis>RotationZ</InputAxis>
@@ -66,6 +75,7 @@
       <OutputComponent>Yaw</OutputComponent>
       <MappingRange>Full</MappingRange>
     </AxisToVectorComponent>-->
+	
     <!--Throttle Power-->
     <AxisToVectorComponent>
       <InputAxis>Z</InputAxis>
@@ -75,9 +85,9 @@
       <OutputComponent>Throttle</OutputComponent>
       <MappingRange>High</MappingRange>
     </AxisToVectorComponent>
-    <!-- Throttle Touchpad (Tilt)-->
+   <!--  (Tilt)-->
     <ButtonToVectorComponent>
-      <InputButton>20</InputButton>
+      <InputButton>7</InputButton>
       <OutputDevice>Throttle</OutputDevice>
       <OutputSet>ThrottleTouchpad</OutputSet>
       <OutputComponent>Y</OutputComponent>
@@ -85,7 +95,7 @@
       <ReleaseValue>0</ReleaseValue>
     </ButtonToVectorComponent>
     <ButtonToVectorComponent>
-      <InputButton>22</InputButton>
+      <InputButton>9</InputButton>
       <OutputDevice>Throttle</OutputDevice>
       <OutputSet>ThrottleTouchpad</OutputSet>
       <OutputComponent>Y</OutputComponent>
@@ -111,7 +121,7 @@
     </ButtonToVectorComponent>
     <!--Brake-->
     <ButtonToVectorComponent>
-      <InputButton>32</InputButton>
+      <InputButton>11</InputButton>
       <OutputDevice>Throttle</OutputDevice>
       <OutputSet>Trigger</OutputSet>
       <OutputComponent>Trigger</OutputComponent>
@@ -120,7 +130,7 @@
     </ButtonToVectorComponent>
   <!--Countermeasures-->
     <ButtonToButton>
-      <InputButton>7</InputButton>
+      <InputButton>1</InputButton>
       <OutputDevice>Throttle</OutputDevice>
       <OutputButton>Menu</OutputButton>
     </ButtonToButton>
