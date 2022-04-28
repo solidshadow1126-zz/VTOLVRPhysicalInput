@@ -8,12 +8,11 @@ Allows usage of HOTAS peripherals (joysticks and throttles) to control aircraft 
 
 ## Installation
 
-1. Download the mod and place it in the "VTOLVR_Modloader/mods" folder, rename "mods" to "Mods" with a capital M.
-2. Run the mod once.
-3. Rename the mod from VTOLVR_Physical_Input to VTOLVRPhysicalInput (Remove Underscores).
-4. Move SharpDX.dll & SharpDX.DirectInput.dll from the Dependencies folder (VTOL VR\VTOLVR_ModLoader\Mods\VTOLVRPhysicalInput\Dependencies) to (VTOL VR\VTOLVR_Data\Managed).
+1. Run the mod once.
+2. Rename the mod from VTOLVR_Physical_Input to VTOLVRPhysicalInput (Remove Underscores).
+3. Copy SharpDX.dll & SharpDX.DirectInput.dll from the Dependencies folder (VTOL VR\VTOLVR_ModLoader\Mods\VTOLVRPhysicalInput\Dependencies) to the Managed Folder (VTOL VR\VTOLVR_Data\Managed).
 
-6. The Hard Part: Edit the VTOLVRPhysicalInputSettings.xml to your HOTAS. (You can use the PDF included in the mod for this part if my explanation sucks)
+4. The Hard Part: Edit the VTOLVRPhysicalInputSettings.xml to your HOTAS. (You can use the PDF included in the mod for this part if my explanation sucks)
 	- a. Hit the search button/bar and type joy.cpl if on windows.
 	- b. Rename the spot in between <stickName></stickName> to the EXACT name of the HOTAS in joy.cpl.
 	- c. Repeat above for the Throttle HOTAS if you have one at the bottom of the file.
